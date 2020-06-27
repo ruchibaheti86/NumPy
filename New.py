@@ -1,0 +1,28 @@
+import numpy as np
+#join two array
+arr1 = np.array([31,23,43])
+print("Array 1:",arr1)
+arr2 = np.array([48,15,60])
+print("Array 2:",arr2)
+joinarr = np.concatenate((arr1,arr2))
+print("two 1-D array joining into one array: ", joinarr)
+arr3 = np.array([[11,21],[13,49]])
+print("1st 2D Array :",arr3)
+arr4 = np.array([[25,46],[97,88]])
+print("2nd 2D Array :",arr4)
+newarr = np.concatenate((arr3, arr4), axis=1)
+print("Join Two 2D Array into one 2D Array:",newarr)
+
+#Stack () in Joining Arrays
+arr1 = np.array([31,23,43])
+print("Array 1:",arr1)
+arr2 = np.array([48,15,60])
+print("Array 2:",arr2)
+joinarr = np.stack((arr1,arr2))
+print("two 1-D array joining into one array with stack function: ", joinarr)
+hstack_arr = np.hstack((arr1, arr2))
+print("Stacking with rows of an array:", hstack_arr)
+vstack_arr = np.vstack((arr1, arr2))
+print("Stacking with columns of an array:", vstack_arr)
+dstack_arr = np.dstack((arr1, arr2))
+print("Stacking with height of an array:", dstack_arr)
